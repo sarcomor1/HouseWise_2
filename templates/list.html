@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <title>animate login form</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'style last.css') }}">
+    </head>
+    <body>
+        <form class="box" action="{{ url_for('sort_list') }}" method="POST">
+                {% for i in DB_records %}
+                <li>{{i[0]}} - xxxxx</li>
+                <li>price {{i[1]}} $</li>
+                <li>size {{i[2]}} m2 <br>------</li> 
+                {% endfor %}
+            <input type="text" name="List/Price/Size" placeholder="List/Price/Size">
+            <input type="submit" name="submit" value="submit">
+        </form>
+    </body>
+</html>
